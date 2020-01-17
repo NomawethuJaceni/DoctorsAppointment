@@ -1,0 +1,157 @@
+<!DOCTYPE htmL>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script type="text/javascript" src="myscripts.js"></script>
+    <script type="text/javascript" src="myjavascripts.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <!-- sideMenu -->
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)"
+    class="closebtn"
+    onclick="closeNav()">&times;</a>
+    <a href="Home.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Services.html">Services</a>
+    <!-- <a href="Clients.html">Clients</a> -->
+    <a href="Contacts.html">Contacts</a>
+</div>
+<!-- <h2>Animated Sidenav Example</h2>
+<p>Click on the element below to open the side navigation menu.</p> -->
+<span style="font-size: 30px; cursor:pointer"
+onclick="openNav()">&#9776;</span>
+<!-- <span
+onclick="openNav()">sideMenu</span>
+<div id="main"></div> -->
+    
+    <!-- <h1>DOCTOR BOOKING APP</h1> -->
+    <img src="../DoctorsAppointment/Images/background.JPG" alt="backgroundImage" class="backgroundCenter">
+    <form method="GET" action="appointment.html"> 
+    <table>
+        <th>PATIENT PERSONAL INFORMATION</th><br>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" id="textsend" name="textsend" onkeyup="validate()" required></td>
+        </tr>
+
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" id="send" name="send" onkeyup="validateSurname()" required></td>
+        </tr>
+
+        <tr>
+            <td>Phone Number</td>
+            <td><input type="text" id="phoneNumber" name="phoneNumber" onkeyup="phoneNumber()" required></td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="email" name="email" onkeyup="validateEmail()"required></td>
+        </tr>
+
+        <tr>
+            <td>ID Number</td>
+            <td><input type="text" id="idNumber" name="idNumber" onkeyup="validateID()" required></td>
+            <!-- to enable button if input is empty
+            onkeyup="if(this.value.length > 0)document.getElementById('button').disabled =false;else document.getElementById('button').disabled=true;"  -->
+        </tr>
+    </table>
+    <br>
+    <h3>What days work best for you?</h3>
+    <input type="radio" name="days" value="monday" required>Monday
+    <input type="radio" name="days" value="tuesday" required>Tuesday
+    <input type="radio" name="days" value="wednesday" required>Wednesday<br><br>
+    <input type="radio" name="days" value="thursday" required>Thursday
+    <input type="radio" name="days" value="friday" required>Friday
+    <input type="radio" name="days" value="saturday" required>Saturday
+    <br>
+    <br>
+    <br>
+
+    <h3>What time works best for you?</h3>
+    <input type="radio" name="dayTime" value="morning" required>Morning
+    <input type="radio" name="dayTime" value="evening" required>Evening
+
+    <br>
+    <br>
+    <br>
+    <h3>What date/time works best for you?</h3>
+    <select name="date" required>
+        <option value=""disabled selected hidden>Date</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21 ">21</option>
+        <option value="22 ">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+    </select>
+
+    <select name="month" required>
+        <option value=""disabled selected hidden>Month</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+
+        <select class="time" name="time" id="time" required onchange="enableButton()">
+            <option value=""disabled selected hidden>Time</option>
+            <option value="8 AM">8 AM</option>
+            <option value="9 AM">9 AM</option>
+            <option value="10 AM">10 AM</option>
+            <option value="11 AM">11 AM</option>
+            <option value="12 PM">12 PM</option>
+            <option value="1 PM">1 PM</option>
+            <option value="2 PM">2 PM</option>
+            <option value="3 PM">3 PM</option>
+            <option value="4 PM">4 PM</option>
+            <option value="5 PM">5 PM</option>
+        </select> 
+
+    <br>
+    <br>
+    <br>
+    <form action="appointment.html">
+        <input type="submit" class="buttonSubmit" value="Book Appointment" id="button" disabled/>
+    </form>
+</form>    
+
+</body>
+<br>
+<footer>&copy;Designed by N.Jaceni</footer>
+</html>

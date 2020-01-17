@@ -1,0 +1,46 @@
+body{
+    background-color:rgb(226, 121, 139);
+    padding-top: 1%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+/* sidemenu style */
+.sidenav{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left:0;
+    background-color: #111;
+    overflow-x:hidden;
+    transition: 0.5s; 
+    padding-top: 60px;
+}
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(226, 121, 139);;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+}
+@media screen and (max-height:450px)
+{
+    .sidenav{padding-top: 15px;}
+    .sidenav a{font-size: 18px;}
+}
+footer{
+    text-align: center;
+    bottom: 100%;
+}
+h1{
+    text-align: center;
+}

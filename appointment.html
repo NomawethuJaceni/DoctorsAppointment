@@ -1,0 +1,110 @@
+<!DOCTYPE htmL>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="calendar.css">
+    <script type="text/javascript" src="myjavascripts.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <!-- sideMenu -->
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)"
+    class="closebtn"
+    onclick="closeNav()">&times;</a>
+    <a href="Home.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Services.html">Services</a>
+    <!-- <a href="Clients.html">Clients</a> -->
+    <a href="Contacts.html">Contacts</a>
+</div>
+<!-- <h2>Animated Sidenav Example</h2>
+<p>Click on the element below to open the side navigation menu.</p> -->
+<span style="font-size: 30px; cursor:pointer"
+onclick="openNav()">&#9776;</span>
+<!-- <span
+onclick="openNav()">sideMenu</span>
+<div id="main"></div> -->
+    
+    <!-- <h1>DOCTOR BOOKING APP</h1> -->
+    <img src="../DoctorsAppointment/Images/background.JPG" alt="backgroundImage" class="backgroundCenter">
+    
+    <!-- <p>Name is : </p><%=request.getParameter("textsend")%> -->
+    <script>
+        function getParams(){
+            var idx =  document.URL.indexOf('?');
+            var params = new Array();
+            if(idx != -1){
+                var pairs = document.URL.substring(idx+1,document.URL.length).split('&');
+                for (var i=0; i<pairs.length;i++){
+                    nameVal =  pairs[i].split('=');
+                    params[nameVal[0]]=nameVal[1];
+                }
+            }
+            return params;
+        }
+        params = getParams();
+        firstname = unescape(params["textsend"]);
+        lastname = unescape(params["send"]);
+        phoneNumber = unescape(params["phoneNumber"]);
+        email = unescape(params["email"]);
+        IDNumber = unescape(params["idNumber"]);
+        days = unescape(params["days"]);
+        dayTime = unescape(params["dayTime"]);
+        date = unescape(params["date"]);
+        month = unescape(params["month"]);
+        time = unescape(params["time"]);
+
+        document.write("Firstname is = " + firstname+ "<br>");
+        document.write("Last Name is = " + lastname+ "<br>");
+        document.write("Phone Number is = " + phoneNumber+ "<br>");
+        document.write("Email Address is = " + email+ "<br>");
+        document.write("ID Number is = " + IDNumber+ "<br>");
+        document.write("Available on = " +days+ "<br>");
+        document.write(" Time of the day is =" + dayTime + "<br>");
+        document.write("Date is = " + date+ "<br>");
+        document.write("Month is = " + month+ "<br>");
+        document.write("Time is = " + time+ "<br>");
+
+       // function getURLParams(){
+         //   var vars={};
+           // var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+            //function(m,key,value) {
+              //  vars[key]=value;
+                
+          //  });
+            //return vars;
+            //alert(vars);
+        //}
+        function sendEmail(){
+          //  var textToWrite ="Testiong text";
+            //var textFileAsBlob = new Blob([textToWrite],{type:'text/plain'});
+            //var fileNameToSAveAs = "textFile";
+
+            //var downloadLink = document.createElement("a");
+            //downloadLink.download = fileNameToSAveAs;
+            //downloadLink.innerHTML = "Download File";
+
+            //if (window.webkitURL!=null) {
+              //      downloadLink.href= window.webkitURL.createObjectURL(textFileAsBlob);
+                //}
+                //else{
+                  //  downloadLink.href=window.URL.createObjectURL(textFileAsBlob);
+                    //downloadLink.onclick= destroyClickedElement;
+                    //downloadLink.style.display="none";
+                    //document.body.appendChild(downloadLink);
+                  //alert("Email sent,We will confirm your appointment within 24 hours");
+                //}
+                //downloadLink.click();
+                alert("We will confirm your appointment within 24 hours");
+            }
+
+    </script>
+    <br>
+    <button onclick="goBack()">Edit Information</button>
+    <button onclick="sendEmail()">Confirm Information</button>
+    
+</body>
+<br><br><br><br><br><br><br><br><br><br><br>
+<footer>&copy;Designed by N.Jaceni</footer>
+</html>
